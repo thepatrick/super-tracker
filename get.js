@@ -37,8 +37,6 @@ let browser;
     return { name: h4.innerText, value: p.innerText };
   }).filter(Boolean));
 
-  console.log(results);
-
   const [transactionTotal, sharesTotal, highGrowthTotal] = results.map(({ value }) => value);
 
   const addResults = await addRow(transactionTotal, sharesTotal, highGrowthTotal);
